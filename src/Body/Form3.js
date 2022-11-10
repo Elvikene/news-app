@@ -3,7 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-function FormComponent({ show, handleClose}) {
+function FormComponent({ show, handleClose }) {
+
+    let title = ['title', 'decription', 'content'];
+    let type = title.map(element => {
+        return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+    });
 
     const languages = [
         { label: 'English', code: 'en' },
@@ -13,11 +18,6 @@ function FormComponent({ show, handleClose}) {
         { label: 'Spanish', code: 'es' },
     ];
 
-    let title = ['title', 'decription', 'content'];
-    let type = title.map(element => {
-        return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
-      });
-      
     return (
         <Offcanvas show={show} onHide={handleClose}>
             <Offcanvas.Header closeButton>
