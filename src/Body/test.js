@@ -32,7 +32,7 @@ function FormComponent({ show, handleClose }) {
                     {['title', 'decription', 'content'].map((type) => (
                         <div key={`${type}`} className="mb-3">
                             <Form.Check
-                                label={type.charAt(0).toUpperCase() + type.slice(1).toLowerCase()} 
+                                label={type}
                                 name="searchIn"
                                 type="checkbox"
                                 id={`inline-${type}-1`}
