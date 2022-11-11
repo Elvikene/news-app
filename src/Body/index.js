@@ -7,6 +7,7 @@ import './News.scss'
 import FormComponent from './Form';
 
 
+
 function NewsGroupComponent() {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
