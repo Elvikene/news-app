@@ -11,6 +11,7 @@ function FormComponent({ show, handleClose }) {
     const [startDateFrom, setStartDateFrom] = useState(new Date());
     const [startDateTo, setStartDateTo] = useState(new Date());
     const dateFormat ="dd-MM-yyyy";
+    const dateFormatData ="DD-MM-yyyy";
 
     const languages = [
         { label: 'English', code: 'en' },
@@ -29,12 +30,12 @@ function FormComponent({ show, handleClose }) {
         event.preventDefault();
         const data = {
             q: event.target.q.value,
-            to: moment(event.target.to.value, dateFormat).startOf('day').format("YYYY-MM-DDT00:00:00.000"),
-            from: moment(event.target.from.value, dateFormat).endOf('day').format("YYYY-MM-DDT23:59:59:999"),
+            to: moment(event.target.to.value, dateFormatData).startOf('day').format("YYYY-MM-DDT00:00:00.000"),
+            from: moment(event.target.from.value, dateFormatData).endOf('day').format("YYYY-MM-DDT23:59:59:999"),
             language: event.target.language.value,
             searchIn: [...event.target.searchIn].filter(input => input.checked).map(input => input.value).join(','),
         };
-
+        console.log(moment(event.target.to.value, dateFormatData));
         console.log(data);
     }
 
