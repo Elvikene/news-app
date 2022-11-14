@@ -4,9 +4,7 @@ import Pagination from 'react-bootstrap/Pagination';
 
 let paginationConfig = {
   totalPages: 30,
-  currentPage: 15,
-  size: "lg",
-  prevNext: true, 
+  size: "lg", 
  };
 
 function PaginatonComponent() {
