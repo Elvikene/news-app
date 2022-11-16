@@ -14,7 +14,6 @@ function NewsGroupComponent() {
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
   
-
   return (
     <>
     <Button variant="outline-primary" onClick={handleShow} className="mb-3">

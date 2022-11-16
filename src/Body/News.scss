@@ -1,5 +1,7 @@
 $hoverBackgroundColor: #ededf0;
 
+
+
 .card {
     &:hover {
         cursor: pointer;
@@ -9,4 +11,8 @@ $hoverBackgroundColor: #ededf0;
             text-decoration: underline;
         }
     }
+}
+.card-img-top {
+    height: 15rem;
+    object-fit: cover;
 }
