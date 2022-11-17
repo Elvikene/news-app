@@ -23,7 +23,7 @@ function NewsGroupComponent(props) {
           const responseData = await response.json();
           setFormResponse(responseData);
       })();
-  }, []);
+  }, [props]);
 
   return (
       <>

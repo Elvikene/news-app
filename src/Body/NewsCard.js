@@ -8,8 +8,6 @@ function NewsCardComponent({article}) {
 
     const [show, setShow] = useState(false);
 
-    console.log(article);
-
     return (
         <>
             <Card onClick={() => setShow(true)}>
