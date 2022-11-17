@@ -3,7 +3,6 @@ import Pagination from 'react-bootstrap/Pagination';
 
 
 let paginationConfig = {
-  totalPages: 30,
   size: "lg",
 };
 

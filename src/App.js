@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import NewsGroupComponent from './Body';
+import NewsGroupComponent from './Body/indexBody';
 import HeaderComponent from './Header';
 import PaginationComponent from './Footer';
 

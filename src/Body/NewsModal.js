@@ -5,10 +5,8 @@ import noImage from '../img/holder.png';
 import Figure from 'react-bootstrap/Figure';
 
 
-function NewsModalComponent({setShow, show, article}) {
-  
+function NewsModalComponent({ setShow, show, article }) {
     const handleClose = () => setShow(false);
-
     return (
         <>
             <Modal size="lg" show={show} onHide={handleClose}>
@@ -18,14 +16,14 @@ function NewsModalComponent({setShow, show, article}) {
                 <Modal.Body>
                     <Figure>
                         <Figure.Image
-                            alt="171x180"
+                            alt=""
                             src={article.urlToImage || noImage}
                         />
                         <Figure.Caption>
-                        {article.url}
+                            {article.url}
                         </Figure.Caption>
                     </Figure>
-                    <p>{article.content}</p>
+                    <p>{article.description}</p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
