@@ -29,6 +29,9 @@ function NewsModalComponent({ setShow, show, article }) {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
+                    <Button variant="primary" href={article.url} target="_blank" onClick={handleClose}>
+                        Open
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </>
