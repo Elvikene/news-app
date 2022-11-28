@@ -1,16 +1,24 @@
 import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-function ContactComponent({ name, address }) {
+
+function ContactComponent({ name, address, phone, email }) {
     return (
         <div>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>
+    <Card> 
+      <Card.Header>Contact</Card.Header>
+        <ListGroup variant="flush">
+        <ListGroup.Item><Card.Title>{name}</Card.Title></ListGroup.Item>
+        <ListGroup.Item>
           Address: {address}
-        </Card.Text>
-      </Card.Body>
+          </ListGroup.Item>
+          <ListGroup.Item>
+          Phone: {phone}
+          </ListGroup.Item>
+          <ListGroup.Item>
+          E-mail: {email} 
+        </ListGroup.Item>
+        </ListGroup>
     </Card>
         </div>
     )

@@ -30,8 +30,8 @@ function App() {
             <PaginationComponent />
           </>
         } />
-        <Route path="/contact" element={<ContactComponent name="Elvi" address="Moon" />} />
-        <Route path="/contact/school" element={<ContactComponent name="School" address="Tallinn" />} />
+        <Route path="/contact" element={<ContactComponent name="Elvi" address="Moon" phone=" + 372 55 555" email="elvi@elvi.ee" />} />
+        <Route path="/contact/school" element={<ContactComponent name="School" address="Tallinn" phone=" + 372 55 555" email="school@school.ee" />} />
       </Routes>
       <errorModalComponent />
     </Container>

@@ -79,6 +79,7 @@ function FormComponent({ show, handleClose, setArticles, searchProps }) {
                             />
                         </div>
                     ))}
+                    
 
                     <Form.Group className="mb-3">
                         <Form.Label>From - to</Form.Label>
