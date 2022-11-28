@@ -1,12 +1,11 @@
-
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import noImage from '../img/holder.png';
+import noImage from '../holder.png';
 import Figure from 'react-bootstrap/Figure';
-
 
 function NewsModalComponent({ setShow, show, article }) {
     const handleClose = () => setShow(false);
+
     return (
         <>
             <Modal size="lg" show={show} onHide={handleClose}>
@@ -23,14 +22,14 @@ function NewsModalComponent({ setShow, show, article }) {
                             {article.url}
                         </Figure.Caption>
                     </Figure>
-                    <p>{article.description}</p>
+                    <p>{article.content}</p>
+                    <Button variant="outline-primary" href={article.url} target="_blank" className="w-100">
+                            Read more
+                    </Button>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
-                    </Button>
-                    <Button variant="primary" href={article.url} target="_blank" onClick={handleClose}>
-                        Open
                     </Button>
                 </Modal.Footer>
             </Modal>
