@@ -1,7 +1,18 @@
+import Card from 'react-bootstrap/Card';
 
-function ContactComponent() {
+function ContactComponent({ name, address }) {
     return (
-        <div>Contact</div>
+        <div>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>
+          Address: {address}
+        </Card.Text>
+      </Card.Body>
+    </Card>
+        </div>
     )
 }
 
