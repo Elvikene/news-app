@@ -21,6 +21,7 @@ function HeaderComponent() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Link to="/contact" className="nav-link">Contact</Link>
+                        <Link to="/contact/school" className="nav-link">Contact School</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
