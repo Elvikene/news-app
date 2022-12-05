@@ -7,3 +7,20 @@ export async function getEverything(data) {
     });
     return await fetch(`${apiUrl}/v2/everything?${params}`);
 }
+
+export async function getSources( ) {
+    const params = new URLSearchParams({
+        apiKey: process.env.REACT_APP_API_KEY
+    });
+    return await fetch(`${apiUrl}/v2/top-headlines/sources?${params}`);
+}
+
+export async function getEverythingDummy(){ 
+
+   return await fetch(`/news-app/dummy-response.json`, {
+    headers: {
+        'Content-Type': 'aplication/json',
+        'Accept': 'aplication/json'
+    }
+   });
+}

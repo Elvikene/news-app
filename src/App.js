@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import NewsGroupComponent from './Body/indexBody';
+import BodyComponent from './Body/indexBody';
 import HeaderComponent from './Header';
 import PaginationComponent from './Footer';
 import ContactComponent from './Body/Contact';
@@ -12,26 +12,26 @@ function App() {
     <Container>
       <HeaderComponent />
       <Routes>
-        <Route path="/" element={
+        <Route path="/news-app" element={
           <>
-            <NewsGroupComponent />
+            <BodyComponent />
             <PaginationComponent />
           </>
         } />
-        <Route path="/:q" element={
+        <Route path="/news-app/:q" element={
           <>
-            <NewsGroupComponent />
+            <BodyComponent />
             <PaginationComponent />
           </>
         } />
-        <Route path="/lang/:lang" element={
+        <Route path="/news-app/lang/:lang" element={
           <>
-            <NewsGroupComponent />
+            <BodyComponent />
             <PaginationComponent />
           </>
         } />
-        <Route path="/contact" element={<ContactComponent name="Elvi" address="Moon" phone=" + 372 55 555" email="elvi@elvi.ee" />} />
-        <Route path="/contact/school" element={<ContactComponent name="School" address="Tallinn" phone=" + 372 55 555" email="school@school.ee" />} />
+        <Route path="/news-app/contact" element={<ContactComponent name="Elvi" address="Moon" phone=" + 372 55 555" email="elvi@elvi.ee" />} />
+        <Route path="/news-app/contact/school" element={<ContactComponent name="School" address="Tallinn" phone=" + 372 55 555" email="school@school.ee" />} />
       </Routes>
       <errorModalComponent />
     </Container>
