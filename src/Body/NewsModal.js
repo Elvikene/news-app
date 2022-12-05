@@ -3,6 +3,9 @@ import Modal from 'react-bootstrap/Modal';
 import noImage from '../holder.png';
 import Figure from 'react-bootstrap/Figure';
 
+// как и любая функция в JS так же и компоненты принимают props (properties)
+// компонент может принять бесконечное количество properties но хранит их все в одной переменной - тип объекта
+// properties передаются в компонент так же как и 
 function NewsModalComponent({ setShow, show, article }) {
     const handleClose = () => setShow(false);
 
